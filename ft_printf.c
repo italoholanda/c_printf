@@ -1,9 +1,9 @@
 #include <unistd.h>
 #include <stdarg.h>
-#include <printf.h>
+#include "ft_printf.h"
 /* tmp */
 #include <stdio.h>
-// cspdiuxX
+
 static	int type_printer(va_list *args, char key)
 {
 	if (key == 'i')
@@ -46,6 +46,7 @@ static	int type_printer(va_list *args, char key)
 		printf("É um Hex maiúsculo!\n");
 		return (1);
 	}
+	args++;
 	return (0);
 }
 
