@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 02:06:54 by coder             #+#    #+#             */
-/*   Updated: 2021/11/13 02:06:57 by coder            ###   ########.fr       */
+/*   Created: 2021/08/19 16:45:17 by igomes-h          #+#    #+#             */
+/*   Updated: 2021/09/01 19:59:08 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "libft/libft.h"
+#include <unistd.h>
+#include "libft.h"
 
-int	ft_printf(const char *str, ...);
-int	nbr_printer(int n);
-
-#endif
+int	ft_isalpha(int c)
+{
+	if (((c >= 'A' ) && (c <= 'Z')) || ((c >= 'a') && (c <= 'z')))
+		return (1);
+	return (0);
+}

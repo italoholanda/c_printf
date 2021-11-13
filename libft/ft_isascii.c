@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 02:06:54 by coder             #+#    #+#             */
-/*   Updated: 2021/11/13 02:06:57 by coder            ###   ########.fr       */
+/*   Created: 2021/08/19 16:45:30 by igomes-h          #+#    #+#             */
+/*   Updated: 2021/08/19 16:59:25 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "libft/libft.h"
+#include "libft.h"
 
-int	ft_printf(const char *str, ...);
-int	nbr_printer(int n);
-
-#endif
+int	ft_isascii(int c)
+{
+	if (c <= 127 && c >= 0)
+		return (1);
+	return (0);
+}

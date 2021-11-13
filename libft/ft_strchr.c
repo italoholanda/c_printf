@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 02:06:54 by coder             #+#    #+#             */
-/*   Updated: 2021/11/13 02:06:57 by coder            ###   ########.fr       */
+/*   Created: 2021/08/30 11:50:52 by igomes-h          #+#    #+#             */
+/*   Updated: 2021/09/14 12:05:14 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "libft/libft.h"
+char	*ft_strchr(const char *s, int c)
+{
+	char	*str;
 
-int	ft_printf(const char *str, ...);
-int	nbr_printer(int n);
-
-#endif
+	str = (char *)s;
+	while (*str != (char)c)
+	{
+		if (!*str)
+			return (0);
+		++str;
+	}
+	return (str);
+}

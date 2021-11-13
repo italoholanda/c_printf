@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 02:06:54 by coder             #+#    #+#             */
-/*   Updated: 2021/11/13 02:06:57 by coder            ###   ########.fr       */
+/*   Created: 2021/08/24 09:54:43 by igomes-h          #+#    #+#             */
+/*   Updated: 2021/09/06 11:24:58 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "libft/libft.h"
+#include "libft.h"
 
-int	ft_printf(const char *str, ...);
-int	nbr_printer(int n);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	unsigned int	i;
 
-#endif
+	i = 0;
+	if (size != 0)
+	{
+		while (src[i] && i < size - 1)
+		{
+			dst[i] = src[i];
+			++i;
+		}
+		dst[i] = 0;
+	}
+	return (ft_strlen(src));
+}

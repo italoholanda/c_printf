@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 02:06:54 by coder             #+#    #+#             */
-/*   Updated: 2021/11/13 02:06:57 by coder            ###   ########.fr       */
+/*   Created: 2021/08/19 10:59:52 by igomes-h          #+#    #+#             */
+/*   Updated: 2021/08/25 15:59:08 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "libft/libft.h"
+#include "libft.h"
 
-int	ft_printf(const char *str, ...);
-int	nbr_printer(int n);
+size_t	ft_strlen(const char *str)
+{
+	size_t	iterator;
 
-#endif
+	iterator = 0;
+	while (str[iterator])
+		iterator++;
+	return (iterator);
+}
