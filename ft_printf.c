@@ -6,51 +6,19 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 01:53:34 by coder             #+#    #+#             */
-/*   Updated: 2021/11/13 18:42:58 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/13 20:24:19 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdarg.h>
 #include "ft_printf.h"
-/* tmp */
-#include <stdio.h>
 
 static	int print_by_type(va_list *args, char key)
 {
 	if (key == 'i' || key == 'u')
 	{
-		nbr_printer(5);
-		return (1);
-	}
-	else if (key == 'c')
-	{
-		printf("É um Char!\n");
-		return (1);
-	}
-	else if (key == 's')
-	{
-		printf("É uma String!\n");
-		return (1);
-	}
-	else if (key == 'p')
-	{
-		printf("É um Ponteiro!\n");
-		return (1);
-	}
-	else if (key == 'u')
-	{
-		printf("É um Unsigned!\n");
-		return (1);
-	}
-	else if (key == 'x')
-	{
-		printf("É um Hex minúsculo!\n");
-		return (1);
-	}
-	else if (key == 'X')
-	{
-		printf("É um Hex maiúsculo!\n");
+		nbr_printer(235);
 		return (1);
 	}
 	args++;
@@ -78,11 +46,4 @@ int	ft_printf(const char *str, ...)
 int	main(void)
 {
 	ft_printf("%i", 9);
-	ft_printf("%c", 9);
-	ft_printf("%s", 9);
-	ft_printf("%p", 9);
-	ft_printf("%d", 9);
-	ft_printf("%u", 9);
-	ft_printf("%x", 9);
-	ft_printf("%X", 9);
 }

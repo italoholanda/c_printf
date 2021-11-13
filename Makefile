@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 20:13:56 by coder             #+#    #+#              #
-#    Updated: 2021/11/13 20:14:42 by coder            ###   ########.fr        #
+#    Updated: 2021/11/13 20:31:57 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,10 +86,9 @@ clean:
 		rm -rf ${OBJECTS}
 
 # REMOVE STATIC PRINTF LIB
-fclean:
+fclean:	clean
 		rm -rf ${NAME}
+			
 
 # REBUILD
-re:
-		fclean all
-
+re:		fclean all
