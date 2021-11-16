@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 02:06:54 by coder             #+#    #+#             */
-/*   Updated: 2021/11/13 02:06:57 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/16 10:57:10 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,8 @@
 
 int	ft_printf(const char *str, ...);
 int	nbr_printer(int n);
+int	unint_printer(int n);
+int	char_printer(char c);
+int	str_printer(char *str);
 
 #endif

@@ -6,13 +6,16 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 20:13:56 by coder             #+#    #+#              #
-#    Updated: 2021/11/13 20:31:57 by coder            ###   ########.fr        #
+#    Updated: 2021/11/16 10:57:32 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # AUX FUNCS
 UTILS = \
-	utils/nbr_printer.c
+	utils/nbr_printer.c		\
+	utils/unint_printer.c	\
+	utils/char_printer.c	\
+	utils/str_printer.c
 
 # LIBFT (HOMEMADE LIBC)
 LIBFT = \
@@ -89,6 +92,5 @@ clean:
 fclean:	clean
 		rm -rf ${NAME}
 			
-
 # REBUILD
 re:		fclean all

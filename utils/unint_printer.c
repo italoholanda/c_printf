@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   nbr_printer.c                                      :+:      :+:    :+:   */
+/*   unint_printer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 20:20:27 by coder             #+#    #+#             */
-/*   Updated: 2021/11/16 11:22:36 by coder            ###   ########.fr       */
+/*   Created: 2021/11/16 10:24:21 by coder             #+#    #+#             */
+/*   Updated: 2021/11/16 11:22:40 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	nbr_printer(int n)
+int	unint_printer(int n)
 {
-	ft_putnbr_fd(n, 1);
+	if (n < 0)
+		ft_putnbr_fd((n * -1), 1);
+	else
+		ft_putnbr_fd(n, 1);
 	return (1);
 }

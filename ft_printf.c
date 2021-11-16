@@ -6,30 +6,41 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 01:53:34 by coder             #+#    #+#             */
-/*   Updated: 2021/11/13 20:24:19 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/16 11:20:50 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdarg.h>
 #include "ft_printf.h"
 
-static	int print_by_type(va_list *args, char key)
+// cspdiuxX%
+// pxX%
+
+static int	print_by_type(va_list *args, char key)
 {
-	if (key == 'i' || key == 'u')
+	if (key == 'i' || key == 'd') /* Integer */
 	{
-		nbr_printer(235);
-		return (1);
+		return (nbr_printer(va_arg(*args, int)));
 	}
-	args++;
+	if (key == 'u') /* Unsigned Int */
+	{
+		return (unint_printer(va_arg(*args, int)));
+	}
+	if (key == 'c') /* Char */
+	{
+		return (char_printer(va_arg(*args, int)));
+	}
+	if (key == 's') /* String */
+	{
+		return (str_printer(va_arg(*args, char *)));
+	}
 	return (0);
 }
 
 int	ft_printf(const char *str, ...)
 {
-	va_list args;
-	int i;
-	int j;
+	va_list	args;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
@@ -41,9 +52,4 @@ int	ft_printf(const char *str, ...)
 		i++;
 	}
 	return (0);
-}
-
-int	main(void)
-{
-	ft_printf("%i", 9);
 }
