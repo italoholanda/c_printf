@@ -6,17 +6,14 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 10:24:21 by coder             #+#    #+#             */
-/*   Updated: 2021/11/16 11:22:40 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/16 12:11:53 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	unint_printer(int n)
+int	unint_printer(unsigned int n)
 {
-	if (n < 0)
-		ft_putnbr_fd((n * -1), 1);
-	else
-		ft_putnbr_fd(n, 1);
+	ft_putnbr_fd(n, 1);
 	return (1);
 }
