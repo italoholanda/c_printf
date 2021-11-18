@@ -3,19 +3,21 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
+#    By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 20:13:56 by coder             #+#    #+#              #
-#    Updated: 2021/11/16 10:57:32 by coder            ###   ########.fr        #
+#    Updated: 2021/11/17 21:38:09 by igomes-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # AUX FUNCS
 UTILS = \
-	utils/nbr_printer.c		\
-	utils/unint_printer.c	\
-	utils/char_printer.c	\
-	utils/str_printer.c
+	utils/nbr_printer.c			\
+	utils/unint_printer.c		\
+	utils/char_printer.c		\
+	utils/str_printer.c			\
+	utils/new_base_printer.c	\
+	utils/ptr_printer.c
 
 # LIBFT (HOMEMADE LIBC)
 LIBFT = \
@@ -73,7 +75,7 @@ COMPILER = clang
 FLAGS = -Wall -Wextra -Werror
 
 # COMPILE AND BUILD STATIC LIB
-$(NAME): 
+$(NAME):
 		${COMPILER} ${FLAGS} -c  ${UTILS}
 		mv *.o ./utils/
 		${COMPILER} ${FLAGS} -c  ${LIBFT}
@@ -91,6 +93,6 @@ clean:
 # REMOVE STATIC PRINTF LIB
 fclean:	clean
 		rm -rf ${NAME}
-			
+
 # REBUILD
 re:		fclean all

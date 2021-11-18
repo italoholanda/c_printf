@@ -32,5 +32,14 @@ int	main(void)
 	printf("STDIO: %s", "Vai um café aí?");
 	printf("\n\n");
 
+	// Ponter
+	char *c = malloc(1);
+	printf("\nPOINTER \n=== \n");
+	ft_printf("LIBFT: %p", &c);
+	printf("\n----\n");
+	printf("STDIO: %p", &c);
+	printf("\n\n");
+
+
 	printf("================= ==== ================ \n\n");
 }

@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ptr_printer.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 02:06:54 by coder             #+#    #+#             */
-/*   Updated: 2021/11/17 21:36:41 by igomes-h         ###   ########.fr       */
+/*   Created: 2021/11/17 21:34:08 by igomes-h          #+#    #+#             */
+/*   Updated: 2021/11/17 21:41:28 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "libft/libft.h"
+#include "../libft/libft.h"
+#include "../ft_printf.h"
 
-int	ft_printf(const char *str, ...);
-int	nbr_printer(int n);
-int	unint_printer(unsigned int n);
-int	char_printer(char c);
-int	str_printer(char *str);
-int	new_base_printer(unsigned long nbr, const char *base);
-int	ptr_printer(unsigned long ptr);
-
-#endif
+int	ptr_printer(unsigned long ptr)
+{
+	ft_putstr_fd("0x", 1);
+	return (new_base_printer(ptr, "0123456789abcdef"));
+}

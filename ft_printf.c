@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 01:53:34 by coder             #+#    #+#             */
-/*   Updated: 2021/11/17 02:08:15 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/17 21:43:18 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	print_by_type(va_list *args, char key)
 	if (key == 's')
 		return (str_printer(va_arg(*args, char *)));
 	if (key == 'p')
-		return (ptr_ptinter(va_arg(*args, unsigned long ptr)));
+		return (ptr_printer(va_arg(*args, unsigned long)));
 	return (0);
 }
 
