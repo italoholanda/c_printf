@@ -6,7 +6,7 @@
 #    By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 20:13:56 by coder             #+#    #+#              #
-#    Updated: 2021/11/17 21:38:09 by igomes-h         ###   ########.fr        #
+#    Updated: 2021/11/18 19:47:00 by igomes-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,9 @@ UTILS = \
 	utils/char_printer.c		\
 	utils/str_printer.c			\
 	utils/new_base_printer.c	\
-	utils/ptr_printer.c
+	utils/ptr_printer.c			\
+	utils/lohex_printer.c		\
+	utils/uphex_printer.c
 
 # LIBFT (HOMEMADE LIBC)
 LIBFT = \

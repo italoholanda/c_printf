@@ -40,6 +40,22 @@ int	main(void)
 	printf("STDIO: %p", &c);
 	printf("\n\n");
 
+	// UPPERCASE X
+	int X = 0x86;
+	printf("\nUPPERCASE X \n=== \n");
+	ft_printf("LIBFT: %X", X);
+	printf("\n----\n");
+	printf("STDIO: %X", X);
+	printf("\n\n");
+
+	// lowercase x
+	char x = 0x86;
+	printf("\nlowercase x \n=== \n");
+	ft_printf("LIBFT: %x", x);
+	printf("\n----\n");
+	printf("STDIO: %x", x);
+	printf("\n\n");
+
 
 	printf("================= ==== ================ \n\n");
 }
