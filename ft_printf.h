@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 02:06:54 by coder             #+#    #+#             */
-/*   Updated: 2021/11/21 10:21:02 by igomes-h         ###   ########.fr       */
+/*   Updated: 2021/11/21 10:44:20 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdarg.h>
 # include "libft/libft.h"
 # ifndef ENV_KERNEL
-#  define ENV_KERNEL "LINUX"
+#  define ENV_KERNEL "BSD"
 # endif
 
 int	ft_printf(const char *str, ...);
