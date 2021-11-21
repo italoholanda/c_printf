@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   unint_printer.c                                    :+:      :+:    :+:   */
+/*   pct_printer.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 10:24:21 by coder             #+#    #+#             */
-/*   Updated: 2021/11/20 23:42:07 by igomes-h         ###   ########.fr       */
+/*   Created: 2021/11/20 22:45:18 by igomes-h          #+#    #+#             */
+/*   Updated: 2021/11/20 22:49:33 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../libft/libft.h"
 
-int	unint_printer(unsigned int n)
+int pct_printer(void)
 {
-	return new_base_printer(n, "0123456789");
+	ft_putchar_fd('%', 1);
+	return (1);
 }
