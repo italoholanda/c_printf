@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:34:08 by igomes-h          #+#    #+#             */
-/*   Updated: 2021/11/21 00:12:21 by igomes-h         ###   ########.fr       */
+/*   Updated: 2021/11/21 10:39:30 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 int	ptr_printer(unsigned long ptr)
 {
-	ft_putstr_fd("0x", 1);
-	return (new_base_printer(ptr, "0123456789abcdef") + 2);
+	if (ptr || !ft_strncmp("BSD", ENV_KERNEL, 3))
+	{
+		ft_putstr_fd("0x", 1);
+		return (new_base_printer(ptr, "0123456789abcdef") + 2);
+	}
+	else
+	{
+		ft_putstr_fd("(nil)", 1);
+		return (5);
+	}
 }
