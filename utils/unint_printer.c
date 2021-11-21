@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 10:24:21 by coder             #+#    #+#             */
-/*   Updated: 2021/11/20 23:42:07 by igomes-h         ###   ########.fr       */
+/*   Updated: 2021/11/21 17:43:29 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	unint_printer(unsigned int n)
 {
-	return new_base_printer(n, "0123456789");
+	return (new_base_printer(n, "0123456789"));
 }

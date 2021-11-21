@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 01:53:34 by coder             #+#    #+#             */
-/*   Updated: 2021/11/21 17:26:48 by igomes-h         ###   ########.fr       */
+/*   Updated: 2021/11/21 17:39:45 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ static int	print_by_type(va_list *args, char key)
 	if (key == 'p')
 		return (ptr_printer(va_arg(*args, unsigned long)));
 	if (key == 'x')
-		return(lohex_printer(va_arg(*args, unsigned int)));
+		return (lohex_printer(va_arg(*args, unsigned int)));
 	if (key == 'X')
-		return(uphex_printer(va_arg(*args, unsigned int)));
+		return (uphex_printer(va_arg(*args, unsigned int)));
 	if (key == '%')
-		return(pct_printer());
+		return (pct_printer());
 	return (0);
 }
 
